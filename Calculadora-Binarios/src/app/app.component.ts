@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,10 +10,10 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class AppComponent {
   title = 'Calculadora-Binarios';
   userForm = new FormGroup({
-    numero: new FormControl(''),
+  numero: new FormControl(''),
   });
 
-  calcular() {
-    console.log(this.userForm.get('numero'));
+  calcular(numero: any) {
+    console.log("Calculando");
   }
 }
