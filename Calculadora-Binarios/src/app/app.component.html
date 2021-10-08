@@ -1,22 +1,24 @@
 <div class="card">
-  <form [formGroup]="userForm">
-    <div class="card-header">
-      Conversor de Binário para Decimal
-    </div>
-    <div class="card-body">
-      <div class="container ">
-        <div class="row binario">
-          <div class="col-12">
-            <label class="col-4">Número Binário</label>
+  <form>
+    <div class="form-group">
+      <div class="card-header">
+        Conversor de Binário para Decimal
+      </div>
+      <div class="card-body">
+        <div class="container ">
+          <div class="row binario">
+            <div class="col-12">
+              <label class="col-4">Número Binário</label>
+            </div>
+            <input type="numeroBinario" [(ngModel)]="numero" name="number" class="form-control" id="numeroBinario" placeholder="Digite um número binário">
           </div>
-          <input type="numeroBinario" class="form-control" id="numeroBinario" placeholder="Digite um número binário">
-        </div>
-        <div class="row decimal">
-          <label class="col-3">Número Decimal</label>
-          <input type="numeroDecimal" class="form-control col-4" id="numeroDecimal" [disabled]="true">
-        </div>
-        <div class="col-1 button">
-          <button type="button" class="btn btn-primary btn-block" (click)="calcular">Calcular</button>
+          <div class="row decimal">
+            <label class="col-3">Número Decimal</label>
+            <input type="numeroDecimal" class="form-control col-4" id="numeroDecimal" [disabled]="true">
+          </div>
+          <div class="col-1 button">
+            <button type="button" class="btn btn-primary btn-block" (click)="calcular()">Calcular</button>
+          </div>
         </div>
       </div>
     </div>

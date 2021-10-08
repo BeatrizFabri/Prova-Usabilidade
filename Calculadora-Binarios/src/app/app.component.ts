@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 
@@ -7,13 +7,13 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css', '../../node_modules/bootstrap/dist/css/bootstrap.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  @Input() numero = '';
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   title = 'Calculadora-Binarios';
-  userForm = new FormGroup({
-  numero: new FormControl(''),
-  });
-
-  calcular(numero: any) {
-    console.log("Calculando");
+  calcular() {
+    console.log(this.numero);
   }
 }
