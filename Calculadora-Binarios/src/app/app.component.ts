@@ -13,7 +13,8 @@ export class AppComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
   title = 'Calculadora-Binarios';
+  numeroDecimal = 0;
   calcular() {
-    console.log(this.numero);
+   this.numeroDecimal = parseInt(this.numero, 2);
   }
 }

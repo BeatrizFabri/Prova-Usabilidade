@@ -14,7 +14,7 @@
           </div>
           <div class="row decimal">
             <label class="col-3">Número Decimal</label>
-            <input type="numeroDecimal" class="form-control col-4" id="numeroDecimal" [disabled]="true">
+            <input type="numeroDecimal" class="form-control col-4" id="numeroDecimal" [(ngModel)]="numeroDecimal" name="decimal" [disabled]="true">
           </div>
           <div class="col-1 button">
             <button type="button" class="btn btn-primary btn-block" (click)="calcular()">Calcular</button>
